@@ -1,0 +1,2 @@
+fastapi # api chiqarish uchun web framework hisoblanadi
+uvicorn # bu fast api ni ishga tushuruvchi run qiluvchi package hisoblanadi

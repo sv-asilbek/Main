@@ -1,0 +1,284 @@
+1. Integer: int ---> 12, -99, 0, 78957889
+2. Float: float  ----> 12.5, 0.9, 8924923.90989
+3. Complex: 12j, 89j, 98i
+4. String: str  ----> "Assalomu-alaykum", 'Python'
+5. Boolen: bool ---> True, False
+6. List: list ---> [1,2,3]
+7. Tuple: tuple ---> (1,2,3)
+8. Set: set  ---> {1,2,3}
+9. Dictionary: dict ---> {'name': 'Asilbek', 'age': 15}
+10.Bo'sh ---> None
+
+/ - slesh
+\ - dekslesh
+
+pip = python installed package
+          List
+list bu tartiblangan indekslangan ozgaruvchan dublikatlarga ruxsat beradigan ro'yxat.
+list ni chappacha chiqarish uchun [::-1]
+"len" ni vazifasi list ni uzunligini chiqarish (o'lchash) Masalan: a = [1,4,7,11,22,30] print(len(a)) Javob: 6
+"append"list ni ichiga narsa qoshish uchun "append" dan foydalaniladi Masalan: a = [] a.append(12) print(a) Javob: 12
+"sum" bu list ning yig'indisini chiqarib beradi. a = [1,4,7,11,22,30] print(sum(a)) Javob: 75
+"max min" list ni katta yoki kichigini chiqarib beradi. a = [1,4,7,11,22,30] print(max(a)) Javob: 30,print(min(a)) Javob:1
+"sort" List kichkinasidan kattasigacha chiqarib beradi. a = [30,7,37,19,11,15] a.sort print(a) Javob: [7,11,15,19,30,37] (o'sish tartibida)
+"reverse" (chappacha) kattadan kichkinasigacha chiqarib beradi. a = [30,7,37,19,11,15] a.reverse print(a) Javob: [37,30,19,15,11,7]
+"insert" indeks bilan kiritiladi so'z yoki sonni xoxlagan joyga qo'ysa boladi.Ko'pincha so'zning boshiga.
+"extend" o'ziga o'zlashtirish. a = 8, b = 6    a.extend(b) Javob: 8,6.
+"pop" ning vazifasi oxiridagi sonlarni ochirib yuborish yoki indeks kiritilsa o'sha sonni o'chiradi. a = [1,2,3,4] a.pop print(a) Javob: [1,2,3] a.pop(1) [1,3]
+"remove" indeksdanmas kiritilgan sonni o'zini ochiradi.a = [1,2,3,4] a.remove(3) Javob: [1,2,4]
+"clear" list ni tozalaydi a = [1,2,4] a.clear Javob: []
+"del" ko'rsatilgan sonni yoki hammasini o'chirsa bo'ladi.a = [1,2,3,4] del a Javob: Unday fayl yo'q
+a.sort(reverse=True)
+
+           Tuple
+Tuple o'zgarmas tartiblangan indekslangan dublikatlarga ruxsat beruvchi ro'yxat.
+Tuple va List ning farqlari:
+1.List o'zgaruvchan bo'ladi tuple esa o'zgarmaydi.
+2.Tuple Listga nisbatan tez ishlaydi va xotiradan kamroq joy egallaydi.
+3.Tuple dictionary ga kalit so'zi bo'la oladi list bo'la olmaydi.
+"count" matndagi sozlarni birxili nechtaligini sanab beradi. Masalan a = ['apple', 'orange', 'peach', 'orange'] print(a.count('orange')) Javob: 2
+
+            String
+"index" bu aytilgan narsani indeksini chiqarib beradi / rindex oxiridan boshlab chiqaradi. a = 'Hello' a.index('l') Javob: 2 / yoki a.rindex('l') Javob: 3
+"find" aytilgan narsani nechinchi indeksdaligini chiqarib beradi. a = 'Hello eagle' a.find('e') Javob: 1 / yoki a.rfind('e') Javob: 10
+"title" harbitta probeldan keyingi sozni katta harfdan boshlaydi. a = 'Hello dasturchilar' a.title() Javob: Hello Dasturchilar
+"capitalize" sozning faqat birinchi harfi katta qolganini kchkina qilib beradi. a = 'salom Salom' a.capitalize() Javob:Salom salom
+"upper" hamma sozni katta qilib beradi. a = 'salom' a.upper Javob: SALOM
+"lower" hamma sozni kichkina qilib beradi. a = 'SALOM' a.lower Javob: salom
+"startswith" shu sozdan boshlanadimi degani. a = 'Hello' a.startswith('Hel') Javob: True / xatoo bo'lsa False
+"endswith" shu soz bilan tugaydimi degani. a = 'Hello' a.endswith('lo') Javob: True / xato bo'lsa False
+"isdigit" faqat raqamli soz bo'lsa True qaytaradi,harfli bo'lsa False.
+"isupper" agar soz faqat katta harfda bolsa True / kichkina bolsa False
+"islower" agar soz faqat kichkina harfda bolsa True / katta bolsa False
+"istitle" agar har bitta probeldan keyin katta harf bolsa True / kichkina harf bolsa False
+"isnumeric" agar sozni ichida raqam bolsa True / bolmasa False
+"isspace" agar boshi bosh joy bilan boshlangan bolsa True / bolmasa False
+"split" yozilgan sozlarni listga saqlab beradi.Yoki harf kiritilsa osha harfdan tashqari hamma sozni yozib beradi. a = 'Hello' a.split Javob ['Hell']
+"replace" sozdagi harfni boshqa harfga ozgartirish. a = 'Salom' a.replace('S', 'D') Javob: Dalom
+"strip" boshidagi bosh joylarni olib tashlaydi. a = ____hello a.strip Javob: hello
+"rstrip" oxiridagi boshjoyni olib tashlaydi. a = hello____ a.strip Javob: hello
+
+            Dictionary
+"keys" Masalan 'name'
+"values" Masalan 'python'
+ichma ich kirish uchun [] listdan foydalaniladi
+"get" keys ni ichiga kirsa boladi
+"popitem" oxirgi elementni chiqaradi
+
+            Set
+Set: Tartiblanmagan, indexlanmagan, dublikatlarga ruxsat bermaydigan o'zgaruvchan ro'yxat.
+"len" uzunligini olchab beradi. a = {1,2,3,4} print(len(a)) Javob: 4
+"pop" setda istagan sonini yoki boshidagi sonni ochiradi (Random). a = {1,2,3,4} a.pop() print(a) {2,3,4}
+"discard" aynan aytilgan narsani ochiradi.a = {1,2,3,4} a.discard(1) print(a) {2,3,4}
+"clear" setni tozalaydi va bosh set qaytaradi.a = {1,2,3,4} a.clear() print(a) set()
+"del" setni ochirib tashlaydi. a = {1,2,3,4} del a  print(a) Error
+"remove" aynan aytilgan narsani ochiradi. a = {1,2,3,4} a.remove(1) print(a) {2,3,4}# a = [i for i in input().split()]
+"update" aytilga narsani qoshadi. a = {1,2,3,4} b = {5,6,7,8} a.update(b) print(a)  {1,2,3,4,5,6,7,8}
+"add" aytilgan sonni setning ichiga qoshib beradi.a = {1,2,3,4} a.add(5) print(a)  {1,2,3,4,5}
+"union" aytilgan sonni listda qabul qilib setning ichiga qoshib beradi.a = {1, 2, 3, 4} print(a.union([12])) {1, 2, 3, 4, 12}
+"difference" bir biridan farqli bolganini chiqaradi a = {"salom","dastur",'english'} b = {'hello', 'salom','world'} print(a.difference(b)) {'dastur','english'}
+"intersection" bir birida oxshash (bor) bolganini chiqaradi a = {"salom","dastur",'english'} b = {'hello', 'salom','world'} print(a.intersection(b)) {'salom'}
+"symetric_difference" bir biridan farqlilarini chiqarib beradi. a = {1, 2, 3, 4, 12, 31} b = {1, 2, 3, 4, 12, 31} print(a.symmetric_difference(b)) {1, 2, 5, 6, 12, 45}
+"symetric_difference_update" bir biridan farqlilarini chiqarib beradi. a = {1, 2, 3, 4, 12, 31} b = {1, 2, 3, 4, 12, 31} print(a.symmetric_difference(b)) {1, 2, 5, 6, 12, 45}
+"intersection_update" dublikatlarni chiqarib beradi (bir xillarini).
+
+module "built in functions" (calendar, datetime)
+       (random)
+"randint" aytilgan raqamlarning orasidagi sonlarni random qilib chiqaradi.
+"choice" aytilgan ro'yxatni random qilib hohlagan sonini chiqaradi.
+ k=2 yoki boshqa, shuncha sonni randomda chiqaradi.
+"shuffle" ro'yxatdagi son yoki sozlarni random qilib beradi.
+"sample" ro'yxatdagi (3 ta sonni) random qilib chiqarib beradi.
+
+"isleap" = kabisa yili
+
+from rembg import remove
+from PIL import Image
+rasm = "m.jpg"
+natija = "natija.png"
+rasm_path = Image.open(rasm)
+natija_path = remove(rasm_path)
+natija_path.save(natija)
+
+        File
+IO --- bu File format. \n --- pastgi qatorga otqazadi.
+"open" faylni ochadi va oxirida close qoyilishi shart.
+"readline" faylning faqat bitta qatorini oqib beradi, ichiga son kiritilsa o'shancha harf yoki sonni chiqaradi.
+"readlines" so'zlarni listga solib beradi.
+"read" to'liq matnni oqib beradi.
+"w" - write, faylning nomidan keyin yoziladi, faylga sozlarni yozadi, ozidan oldingi mavjud bolganini ochiradi.
+"write" faylga sozlarni qoshadi.
+"a" --- append, faylning nomidan keyin yoziladi,faylga sozlarni tekstni davomidan yozadi. \n
+"rt" --- read text file, faqat textlarni, sozlarni oqiydi.
+"rb" --- read byte file, rasmlarni va shunga oxshash narsalarni oqiydi, tekstli faylni ham oqiydi faqat bir qatorda.
+"x" faylning nomidan keyin yoziladi, yangi fayl ochib beradi.
+
+        Terminal (windows + R, cmd) cpu_count()
+"exit()" chiqish.
+"cd .." bitta orqaga qaytish.
+
+        os - operatsion sistema
+"getcwd()" manzilni topib ebradi.
+"listdir" berilgan manzilni ichida nima fayllar borligini chiqarib beradi.
+"path" - yol
+"exists" - mavjud bolsa
+"path.exists()" fayl mavjud yoki yoqligini tekshiradi (True, False - qaytaradi) Masalan: a = 'new.txt' f = os.path.exists(a) (False, True)
+"try" except Exception as
+"remove" faylni ochirish.
+"rmdir" papkani ochirish.
+"makedirs" papkani ichida papka ochsa boladi. r('manzil')
+
+        requests
+"get" bor malumotni olib beradi.
+"post" sayt yaratish
+
+        json (dict va str) json str qaytaradi
+indent=4 chiqayotgan malumotni 4 tadan chiqaradi.
+separators=',', '=' belgilar orqali togirlab berish, belgini boshqa belgiga otqazib beradi.
+json obyekt - python obyekt
+json da None type null ga ozgaradi, pythonda null type None ga ozgaradi
+"dumps" json obyektni python obyektga otqazib beradi.
+"loads" json obyektdan python obyektga qaytarsa boladi.
+
+        OOP - (Abstraction, Inheritance, Polymorphism, Encapsulation)
+1.Abstraction
+Murakkablikni berkitish maqsadida keraksiz tafsilotlarni foydalanuvchidan yashirish(abstract class/interface)
+
+2.Inheritance
+Avlod obyektlarini ajdod obyektlarning xususiyatlaridan meros olishi(base/super class  drived\sub class)
+
+3.Polymorphism
+Obyektning turiga qarab u bilan o'ziga hos ravishda ishlash qobiliyati. masalan, shakl abstrakt klassining Draw() methodi doira va uchburchak uchun hos tarzda ishlaydi(virtual\override)
+
+4.Encapsulation
+Klassdagi o'zgaruvchi va ichki metodlarni tashqaridan chaqirilishidan berkitish(getter\setter)
+
+        cmd-командная строка
+dir - ichida nima borligini korsatadi
+mkdir - file yaratadi
+cd - ichiga kirish
+cd .. - bitta orqaga qaytish
+color a(2) - yashil yozuv
+Windows: py -m venv venv, Linux: virtualenv venv
+Windows: venv\Scripts\activate, Linux: source/venv/activate
+pip install ... - nimadur yuklash uchun
+pip list - nimalar borligi
+        cmd project (django)
+mkdir project_001
+cd project_001
+py -m venv venv
+venv\Scripts\activate
+pip install django
+pip install --upgrade pip
+pip freeze > requirements.txt
+django-admin startproject config .
+papkaga kirib config va manage.py ochiriladi
+django-admin startproject config
+python manage.py runserver
+cd config
+python manage.py runserver
+
+
+
+# PostgreSQL komandalari
+
+1. postgresqlga kirish
+```shell
+sudo -u postgres psql
+```
+2. yangi database yaratish
+CREATE DATABASE databasename;
+3. yangi user yaratish
+CREATE USER username WITH PASSWORD 'password';
+4. Database va userni bog'lash
+GRANT ALL PRIVILEGES ON DATABASE databasename TO user_name;
+# yoki faqat databseni ulab o'qimoqchi bo'lsak
+GRANT CONNECT TO DATABASE databasename TO user_name;
+# oddiy userni superuserga aylantirish
+ALTER USER username SUPERUSER;
+
+# Qo'shimcha kerakli komandalar
+\l  # - hamma mavjud databaselarni ko'rish
+\dt  # - hamma Jadvallarni ko'rish
+\du  # - hamma Userlarni ko'rish
+\c  database_name  # databasega bog'lanish
+\d table_name  # Jadval(TABLE) sxemasi ko'rish
+\q  # - chiqish
+
+
+
+# Postgres (makaroo - yordamchi sayt)
+create table table_name(
+    name varchar(55)
+    age int2
+    ); -- table yaratish
+
+drop table table_name; -- table ni o'chirish
+
+delete
+from table_name
+where id = 1; table ni ichidagi malumotni ochirish, id ni orniga name = 'Asilbek' bolishi mumkin
+
+
+insert into (table_name) (name, last_name, age)
+values ('Asilbek', 'Suyunov', 15); -- table ga malumot qo'shish
+
+alter table (table_name) add column birth_date varchar(55); -- table ga yangi column qo'shish
+
+--> New theme 'aggregate function' - sum, count, max, min, length, unique, check, avg, nested query
+
+-- sum bu function hisoblanib, int yoki float tipidagi qiymatlarni yig'ib berish uchun foydalaniladi # sum (summary) - hammasini qo'shib chiqarib beradi, example: select sum(age) from Asilbek;
+-- count bu bitta table ni ichidan nechta bir xillari borligini sanab beruvchi function hisoblanadi # count nechtaligini sanab beradi, example: select count(age) from Asilbek;
+-- max va min (int va float) functionlari bu maximum va minimum ni hisoblaydi, example: select max(age) from Asilbek; select min(age) from Asilbek;
+-- length functioni bu uzunligini hisoblaydi, ko'p vaziyatlarda permission yozishda ishlatiladi, example: select length(a.name) from Asilbek as a;
+-- avg bu o'rtacha qiymatni aniqlab beradi, example: select avg(age) from Asilbek;
+
+--> New theme 'distinct, like, not like, is null, order by, group by, having limit offset, (next, first) fetch, between, not between'
+
+-- distinct bu dublikat malumotlarni unique ko'rinishga keltiradi, ya'ni dublikatlarni bitta qilib beradi (o'chirib tashlaydi), example: select distinct name from Asilbek;
+-- like bu searching ga o'xshagan function - '%' o'zi bo'lsa hammasini chiqaradi
+-- % bu nima? % ning 3 ta turi bor. 1 - 'A%' bu soz boshi A dan boshlanishini bildiradi, example: select * from Asilbek where name like 'A%'; - buni oxiriga yoki ortasiga(ichida shunday harfli malumot bormi degan savol bilan, agar ortada shu harfli malumot bolmasa oxirgisini oladi ('%b%' = '%b') ) ham qoyish mumkin ('A%', ''%k', '%a%', 'A%k')
+-- not like bu like ni teskarisi. Yani 'A%' soz boshi A bilan boshlanmasin
+-- in null va is not null tushunchasi. Bu bosh ustunlarni korish yoki qaytarishda ishlatiladi ('' bo'sh) in null bo'm bo'sh datalarni chiqaradi, is not null da to'liq chiqaradi
+-- order by bu asosan tartiblashda ishlatiladi. order by da ikkita tushuncha bor:
+-- ascending o'sish tartibida, yani 0 dan oxirgi nuqtagacha, example: select * from Asilbek order by name asc ; --> asc yozmasa ham bir xil tartibda (o'sish tartibida) chiqaradi
+-- descending kamayish tartibida, yani oxirgi nuqtadan 0 gacha. example: select * from Asilbek order by name desc;
+-- group by - bu guruhlab beradi, dublikatlarni ham o'chiradi
+-- having - where ni takomillashtirilgani, va having faqat agregad functionlar bilan ishlaydi, example: select name, min(age) from Asilbek group by name having min(age) >= 17; -- group by bilan ishlatiladi.
+-- limit bu chegara desa ham bo'ladi (limit chegara, offset boshlang'ich nuqta - id)
+-- offset id bo'yicha olib kelib beradi, example: select * from Asilbek limit 2 offset 2; -- (2) + 1 id dan boshlab 2 ta malumotni olib beradi
+-- fetch bu limit offset bilan bir xil narsa desa ham bo'ladi (fetch da 1 id dan boshlab chiqaradi, limit offset da chegara berish mumkin), first dan keyin chegara yozilmasa birinchi id ni olib kelib beradi
+-- between bu oraliqda ishlatiladi
+
+--> New theme 'Operator' (JOIN) lar --- 'UNION' - 'UNION ALL' - 'INTERSECT' - 'EXCEPT'
+
+-- UNION - ikkala jadval natijalarini birlashtiradi. (UNION dublikatsiz - UNION ALL dublikat bilan hammasini) select * bilan bir hil
+-- UNION ALL - ikki yoki undan ortiq natijalar to'plamini barcha takroriy qatorlarni o'z ichiga olgan holda bitta to'plamga birlashtiradi.
+-- INTERSECT - ikkalasida ham umumiy bo'lgan natijalar to'plamidan qatorlarni oladi. (2 ta table da bir hil bo'lgan field(ma'lumotlarni) larni chiqazadi)
+-- EXCEPT - birinchi natija ma'lumotlaridan qatorlarni oladi, lekin ikkinchi natijalar to'plamida emas. {faqat birinchi table ni chiqaradi select *}
+
+--> --> New theme 'JOIN' Left join - Right join - Inner join - Full join
+
+-- left join - birinchi table (chap tomon) dagi ma'lumotlar chiqadi (va o'ng tomonga bog'langan field lar)
+-- right join - ikkinchi table (o'ng tomon) dagi ma'lumotlar chiqadi (va chap tomonga bog'langan field lar)
+-- inner join - ikkita table ni bir biriga bog'langan field lari chiqadi, example: 1-table dagi name(Asilbek) 2-table dagi role(Student) ga bog'langan
+-- full join - hamma field ni chiqaradi 2-ta table dagi hamma ma'lumotni qo'shib bog'langan, bog'lanmagan, null, hammasini chiqarib beradi.
+
+--> New theme
+
+-- case - (int va float) orqali ustun yaratish mumkin, oxirgi qatorda end orqali columb ga nom qo'yish mumkin(end ni o'zi qolsa 'case' columb nomi bo'ladi), exampe: end columb
+-- coalesce - bu function bolib hohlagancha qiymat berish mumkin va agar birinchi qiymat null bo'lsa 2-qiymatni oladi agar 2-qiymat null kelsa qiymatni oladi, yani nullikdan qochish deyiladi, qiymatlarni chapdan o'nga qarab oladi.
+
+--> New theme
+
+-- loop tsikl ligini anglatadi - for loop, while loop, loop (for, while ga oxshaydi)
+-- declare orqali o'zgaruvchi yaratiladi
+-- 'i = %', i - (% belgisi i ni o'ziga o'zlashtiradi)
+
+
+------------------------------------
+-------- Docker --------------------
+------------------------------------
+Docker file yaratish: (Terminal)
+$ touch Dockerfile
+$ touch docker-compose.yml

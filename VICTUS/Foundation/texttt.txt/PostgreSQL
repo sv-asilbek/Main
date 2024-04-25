@@ -1,0 +1,173 @@
+--> first day
+
+create table Asilbek
+(
+    id   serial2 primary key,
+    name varchar(55),
+    age  int
+);
+
+select *
+from Asilbek;
+
+
+drop table Asilbek;
+
+insert into Asilbek (name, age, birth_date)
+values ('Asilbek', 15, 2008);
+
+delete
+from Asilbek
+where id = 2;
+
+alter table Asilbek
+    add column birth_date varchar(55);
+
+update Asilbek
+set age = 16
+where id = 3;
+
+select *
+from Asilbek
+where name = 'Asilbek';
+
+select name, age
+from Asilbek
+where id < 11;
+
+select name, age
+from Asilbek
+where id between 1 and 10;
+
+--> second day
+insert into Asilbek (name, age, birth_date)
+values ('Tom', 30, 2000);
+
+insert into Asilbek (name, age, birth_date)
+values ('Jack', 40, 1980);
+
+insert into Asilbek (name, age, birth_date)
+values ('Asilbek', 50, 1960);
+
+select *
+from Asilbek;
+
+--> New theme 'aggregate function' - sum, count, max, min, length, unique, check, avg, nested query
+
+-- sum
+
+select sum(age)
+from Asilbek;
+
+--  count
+
+select count(age)
+from Asilbek;
+
+select count(age)
+from Asilbek where age = 16;
+
+-- max - min
+
+select max(age)
+from Asilbek;
+
+select min(age)
+from Asilbek;
+
+-- length
+
+select length(a.name)
+from Asilbek as a;
+
+-- avg
+
+select avg(age)
+from Asilbek;
+
+--> New theme 'distinct, like, not like, is null, order by, group by, having limit offset, (next, first) fetch, between, not between'
+
+
+-- distinct
+
+select distinct name
+from Asilbek;
+
+-- like, %
+select *
+from Asilbek where name like 'A%';
+
+select *
+from Asilbek where name like '%k';
+
+select *
+from Asilbek where name like '%e%';
+
+select *
+from Asilbek where name like 'A%k';
+
+-- not like
+
+select *
+from Asilbek where name not like 'A%k';
+
+-- is null - is not null
+
+select *
+from Asilbek where age is null;
+
+select *
+from Asilbek where age is not null;
+
+-- ascending, descending
+
+select *
+from Asilbek order by name asc; --> asc yozmasa ham bir xil tartibda (o'sish tartibida) chiqaradi
+
+select *
+from Asilbek order by name desc;
+
+-- group by
+
+select name
+from Asilbek
+group by name;
+
+select name, count(*)
+from Asilbek
+group by name;
+
+select name, count(*), max(age) :: int8, min(age) :: int8
+from Asilbek
+group by name;
+
+-- having
+
+select name, min(age)
+from Asilbek
+group by name
+having min(age) >= 17;
+
+-- limit
+
+select *
+from Asilbek limit 2;
+
+-- offset
+
+select *
+from Asilbek limit 2 offset 2;
+
+-- fetch
+
+select *
+from Asilbek fetch first 3 row only;
+
+-- between
+
+select *
+from Asilbek where age between 15 and 45;
+
+select *
+from Asilbek where id between 1 and 6;
+

@@ -1,0 +1,20 @@
+nested query - ichma ich query yozish (example: nested for, nested if, create ni ichida create yozish)
+table ni qisqartmasini nomlab olishda ikki marta 'as' ni ishlatish mumkin emas
+
+Django Core
+SQL&PostgreSQL
+Django RestAPI
+FastAPI
+Message Brokerlar(Celery, RabbitMQ)
+Git/Gitlab va Github
+Docker&Deploy
+Server(Nginx)
+Microservices
+
+*Websocket
+*MongoDB
+*HTML&CSS&JS
+*ReactJS
+**CI/CD
+**PyTest/UniTest
+**InglizTili
